@@ -8,9 +8,6 @@
 }
 
 .burger svg {
-  transform: translate(-50%, -50%) scale(1);
-  top: 50%;
-  left: 50%;
   opacity: 1;
   transition: opacity 300ms ease, transform 300ms ease;
 }
@@ -29,6 +26,7 @@
   z-index: 1000;
   opacity: 0;
   left: 0;
+  top: 80px;
   transition: opacity 300ms ease, transform 300ms ease;
 }
 
@@ -46,9 +44,11 @@
 }
 
 .menuRendered li {
-  @apply border-gray-200 dark:border-gray-600 w-full;
-  transform: translateX(0);
-  opacity: 1;
+  @apply border-gray-200; 
+  @apply w-full;
+  @apply transform; 
+  @apply translate-x-0;
+  @apply opacity-100;
 }
 
 .menu > * + * {

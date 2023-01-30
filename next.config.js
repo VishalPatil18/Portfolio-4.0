@@ -2,18 +2,17 @@
  * @type {import('next').NextConfig}
  */
 module.exports = {
+  swcMinify: true,
   reactStrictMode: true,
   images: {
     domains: [
-      'i.scdn.co', // Spotify Album Art
-      'pbs.twimg.com', // Twitter Profile Picture
       'cdn.sanity.io'
     ]
   },
   experimental: {
-    fontLoaders: [
-      { loader: '@next/font/google', options: { subsets: ['latin'] } }
-    ]
+    legacyBrowsers: false,
+    browsersListForSwc: true,
+    images: { allowFutureImage: true }
   },
   async headers() {
     return [

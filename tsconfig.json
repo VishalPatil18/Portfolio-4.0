@@ -16,6 +16,19 @@
     "baseUrl": ".",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "data/career.js",
+    "data/achievements.js",
+    "data/blogs.js",
+    "data/education.js",
+    "data/icons.js",
+    "data/images.js",
+    "data/openSource.js",
+    "data/positionOfResponsibility.js",
+    "data/projects.js"
+  ],
   "exclude": ["node_modules"]
 }

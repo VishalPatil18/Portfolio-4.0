@@ -1,77 +1,46 @@
-import Link from 'next/link';
-
-import NowPlaying from 'components/NowPlaying';
-
-const ExternalLink = ({ href, children }) => (
-  <a
-    className="text-gray-500 hover:text-gray-600 transition"
-    target="_blank"
-    rel="noopener noreferrer"
-    href={href}
-  >
-    {children}
-  </a>
-);
+import {
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+  AiFillGithub,
+  AiFillInstagram
+} from 'react-icons/ai';
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col justify-center items-start max-w-2xl mx-auto w-full mb-8">
-      <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-8" />
-      <NowPlaying />
-      <div className="w-full max-w-2xl grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
-        <div className="flex flex-col space-y-4">
-          <Link
-            href="/"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            About
-          </Link>
-          <ExternalLink href="https://leerob.substack.com">
-            Newsletter
-          </ExternalLink>
-        </div>
-        <div className="flex flex-col space-y-4">
-          <ExternalLink href="https://twitter.com/leeerob">
-            Twitter
-          </ExternalLink>
-          <ExternalLink href="https://github.com/leerob">GitHub</ExternalLink>
-          <ExternalLink href="https://www.youtube.com/@leerob">
-            YouTube
-          </ExternalLink>
-        </div>
-        <div className="flex flex-col space-y-4">
-          <Link
-            href="/uses"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Uses
-          </Link>
-          <Link
-            href="/guestbook"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Guestbook
-          </Link>
-          <Link
-            href="/snippets"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Snippets
-          </Link>
-          <Link
-            href="/tweets"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Tweets
-          </Link>
-        </div>
+    <div className="flex w-full justify-between items-center mt-10 pt-10 border-t border-t-gray-200 dark:border-t-gray-600">
+      <p className="text-gray-400 inline-flex items-center">
+        Design by &nbsp;<a className="hover:underline hover:text-gray-600" href="https://leerob.io/" target="_blank">Lee Robinson</a>.
+      </p>
+      <div className="flex gap-2 text-gray-400">
+        <a
+          href="https://www.linkedin.com/in/vishalrameshpatil/"
+          target="_blank"
+          className="hover:text-gray-700 hover:dark:text-gray-200 transition duration-150"
+        >
+          <AiFillLinkedin className="h-6 w-6" />
+        </a>
+        <a
+          href="https://twitter.com/VishalPatil1810"
+          target="_blank"
+          className="hover:text-gray-700 hover:dark:text-gray-200 transition duration-150"
+        >
+          <AiFillTwitterCircle className="h-6 w-6" />
+        </a>
+        <a
+          href="https://www.instagram.com/_vishal_._lahsiv_/"
+          target="_blank"
+          className="hover:text-gray-700 hover:dark:text-gray-200 transition duration-150"
+        >
+          <AiFillInstagram className="h-6 w-6" />
+        </a>
+        <a
+          href="https://github.com/VishalPatil18"
+          target="_blank"
+          className="hover:text-gray-700 hover:dark:text-gray-200 transition duration-150"
+        >
+          <AiFillGithub className="h-6 w-6" />
+        </a>
       </div>
-    </footer>
+    </div>
   );
 }
