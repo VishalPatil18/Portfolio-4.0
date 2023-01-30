@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import clsx from 'clsx';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import Container from 'components/Container';
 import MyFavouriteTech from 'components/MyFavouriteTech';
 import Education from 'components/Education';

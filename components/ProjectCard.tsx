@@ -1,4 +1,5 @@
-import STACK_TO_ICON from '../data/icons';
+import STACK_TO_ICON from "../data/icons";
+import ExternalLink from './ExternalLink';
 
 export default function ProjectCard({
   title,
@@ -7,12 +8,12 @@ export default function ProjectCard({
   projectImage,
   stack,
   brandColor,
-  githubLink
+  githubLink,
 }) {
   return (
     <div className=" my-6 transform hover:scale-[1.01] transition-all bg-white dark:bg-gray-900 w-full flex items-center justify-between border border-gray-200 dark:border-gray-800 rounded-lg">
       <div className="flex items-center">
-        <a
+        <ExternalLink
           className="mr-4 w-52 md:w-72 flex-shrink-0 rounded-tl-lg rounded-bl-lg border-gray-200"
           href={link}
         >
@@ -22,15 +23,15 @@ export default function ProjectCard({
             style={{ color: brandColor }}
             className="min-w-lg text-gray-900 dark:text-gray-100 object-cover overflow-hidden w-full rounded-tl-lg rounded-bl-lg"
           />
-        </a>
+        </ExternalLink>
         <div className="p-2">
           <div className="flex space-x-2">
-            <a
+            <ExternalLink
               className="text-lg font-bold tracking-tight text-gray-900 dark:text-gray-100 hover:underline"
               href={link}
             >
               {title}
-            </a>
+            </ExternalLink>
           </div>
           <p className="leading-5 text-gray-700 dark:text-gray-300 ">
             {description}
@@ -51,13 +52,13 @@ export default function ProjectCard({
               );
             })}
           </div>
-          <a
+          <ExternalLink
             className="mt-2 text-xs font-light text-gray-500 dark:text-gray-400 hover:underline"
             href={githubLink}
             aria-label={title}
           >
             {githubLink}
-          </a>
+          </ExternalLink>
         </div>
       </div>
     </div>
