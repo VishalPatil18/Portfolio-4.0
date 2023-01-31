@@ -1,7 +1,7 @@
-import Container from 'components/Container';
-import Footer from 'components/Footer';
-import ProjectCard from 'components/ProjectCard';
-import projectsData from 'data/projects';
+import Container from "components/Container";
+import Footer from "components/Footer";
+import ProjectCard from "components/ProjectCard";
+import projectsData from "data/projects";
 
 export default function Projects() {
   return (
@@ -18,8 +18,9 @@ export default function Projects() {
           You can check them out here. Let me know what you think!
         </p>
         <div className="w-full">
-          {projectsData.map((project) => (
+          {projectsData.map((project, idx) => (
             <ProjectCard
+              key={idx}
               title={project.title}
               description={project.description}
               link={project.link}

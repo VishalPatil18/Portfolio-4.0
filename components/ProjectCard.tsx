@@ -1,5 +1,6 @@
+import Image from "next/image";
 import STACK_TO_ICON from "../data/icons";
-import ExternalLink from './ExternalLink';
+import ExternalLink from "./ExternalLink";
 
 export default function ProjectCard({
   title,
@@ -18,9 +19,13 @@ export default function ProjectCard({
           href={link}
         >
           <span className="sr-only">{title}</span>
-          <img
+          <Image
             src={projectImage}
             style={{ color: brandColor }}
+            alt="project"
+            height={120}
+            width={120}
+            unoptimized
             className="min-w-lg text-gray-900 dark:text-gray-100 object-cover overflow-hidden w-full rounded-tl-lg rounded-bl-lg"
           />
         </ExternalLink>

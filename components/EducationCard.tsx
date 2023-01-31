@@ -1,4 +1,5 @@
-import ExternalLink from './ExternalLink';
+import Image from "next/image";
+import ExternalLink from "./ExternalLink";
 
 export default function EducationCard({
   instituteName,
@@ -6,16 +7,18 @@ export default function EducationCard({
   description,
   time,
   link,
-  logo
+  logo,
 }) {
   return (
     <div className=" transform hover:scale-[1.01] transition-all border border-gray-200 my-5 dark:border-gray-800 p-4 rounded-lg animate-scale">
       <div className="relative">
         <div className="relative flex items-start md:space-x-3">
           <a className="w-16 h-16 md:w-32 md:h-32" href={link}>
-            <img
-              className="items-center justify-center rounded-md md:flex"
+            <Image
               src={logo}
+              className="items-center justify-center rounded-md md:flex"
+              height={120}
+              width={120}
               alt="institute"
             />
           </a>

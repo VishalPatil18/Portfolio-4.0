@@ -1,16 +1,16 @@
-import { Suspense } from 'react';
-import clsx from 'clsx';
-import Image from 'next/image';
-import Container from 'components/Container';
-import MyFavouriteTech from 'components/MyFavouriteTech';
-import Education from 'components/Education';
-import Interests from 'components/Interests';
-import Achievements from 'components/Achievements';
-import Footer from 'components/Footer';
+import { Suspense } from "react";
+import clsx from "clsx";
+import Image from "next/image";
+import Container from "components/Container";
+import MyFavouriteTech from "components/MyFavouriteTech";
+import Education from "components/Education";
+import Interests from "components/Interests";
+import Achievements from "components/Achievements";
+import Footer from "components/Footer";
 
 export default function Home() {
   const redGradient =
-    'bg-gradient-to-r from-rose-500 via-pink-500 to-purple-500 text-transparent bg-clip-text';
+    "bg-gradient-to-r from-rose-500 via-pink-500 to-purple-500 text-transparent bg-clip-text";
 
   return (
     <Suspense fallback={null}>
@@ -29,11 +29,11 @@ export default function Home() {
                 <span
                   className={clsx(
                     redGradient,
-                    'transition-transform duration-500 ease-in-out hover:duration-300'
+                    "transition-transform duration-500 ease-in-out hover:duration-300"
                   )}
                 >
-                  {' '}
-                  MERN stack developer{' '}
+                  {" "}
+                  MERN stack developer{" "}
                 </span>
                 currently studying in Mumbai, India. <br />I am a 22 years old
                 Hustler, Learner & Explorer by heart.
@@ -41,10 +41,10 @@ export default function Home() {
             </div>
             <div className=" sm:w-[176px] relative mb-8 sm:mb-0">
               <Image
+                src="/avatar.png"
                 alt="Vishal Patil"
                 height={120}
                 width={120}
-                src="/avatar.png"
                 sizes="30vw"
                 priority
                 className="rounded-full filter grayscale ml-auto"

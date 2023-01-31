@@ -1,7 +1,7 @@
-import BlogsCard from 'components/BlogsCard';
-import Container from 'components/Container';
-import Footer from 'components/Footer';
-import blogsData from 'data/blogs';
+import BlogsCard from "components/BlogsCard";
+import Container from "components/Container";
+import Footer from "components/Footer";
+import blogsData from "data/blogs";
 
 export default function Blogs() {
   return (
@@ -15,8 +15,9 @@ export default function Blogs() {
           can check them out here. Let me know what you think!
         </p>
         <div className="w-full">
-          {blogsData.map((blog) => (
+          {blogsData.map((blog, idx) => (
             <BlogsCard
+              key={idx}
               title={blog.title}
               description={blog.description}
               link={blog.link}
